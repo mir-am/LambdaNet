@@ -100,13 +100,13 @@ object JSExamples {
       'isNaN -> (List(number) -: boolean),
       'parseFloat -> (List(string) -: number),
       // special vars
-      '$TypeOf -> (List(any) -: string),
-      '$Spread -> (List(anyArray) -: any),
-      '$Case -> (List(number) -: void),
-      '$Switch -> (List(number) -: void),
-      '$Delete -> (List(any) -: void),
-      '$ArrayAccess -> (List(anyArray) -: any),
-      '$Yield -> (List(any) -: generator)
+      Symbol("TYPEOF") -> (List(any) -: string),
+      Symbol("SPREAD") -> (List(anyArray) -: any),
+      Symbol("CASE") -> (List(number) -: void),
+      Symbol("SWITCH") -> (List(number) -: void),
+      Symbol("DELETE") -> (List(any) -: void),
+      Symbol("ARRAYACCESS") -> (List(anyArray) -: any),
+      Symbol("YIELD") -> (List(any) -: generator)
     )
 
     def addType(name: Symbol): Unit = {

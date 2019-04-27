@@ -192,7 +192,7 @@ object PredicateGraphConstruction {
 
   object LibraryContext {
     def libIdForVar(s: Symbol): Symbol = {
-      Symbol("LIB$" + s.name)
+      Symbol("VAR_" + s.name)
     }
   }
 

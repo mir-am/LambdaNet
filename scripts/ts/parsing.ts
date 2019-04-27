@@ -881,15 +881,15 @@ export function getSingleton<A>(xs: A[]): A {
 
 
 class SpecialVars {
-  static spread = new Var("$Spread");
-  static typeOf = new Var("$TypeOf");
   static THIS = new Var("this");
   static SUPER = new Var("super");
-  static CASE = new Var("$Case");
-  static SWITCH = new Var("$Switch");
-  static DELETE = new Var("$Delete");
-  static ArrayAccess = new Var("$ArrayAccess");
-  static YIELD = new Var("$Yield");
+  static spread = new Var("SPREAD");
+  static typeOf = new Var("TYPEOF");
+  static CASE = new Var("CASE");
+  static SWITCH = new Var("SWITCH");
+  static DELETE = new Var("DELETE");
+  static ArrayAccess = new Var("ARRAYACCESS");
+  static YIELD = new Var("YIELD");
 }
 
 // utilities

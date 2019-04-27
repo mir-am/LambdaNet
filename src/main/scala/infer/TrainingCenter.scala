@@ -152,9 +152,9 @@ object TrainingCenter {
 
     def encodeDecode(): (CompNode, IS[Embedding]) = {
       val libraryTypeMap: Map[Symbol, CompNode] = {
-        libraryTypes.map { k =>
-          val s = Symbol(k.toString)
-          s -> randomVar('TyVar / s)
+        libraryTypes.collect {
+          case TyVar(s) => //only type vars, other types would be deconstructed
+            s -> randomVar('TyVar / s)
         }
       }.toMap
 
